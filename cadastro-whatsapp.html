@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Conectar WhatsApp – Leal Ferreira Corretora de Seguros</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<header><div class="topo"><img src="icone.jpg" alt=""><div class="marca">LEAL FERREIRA<small>CORRETORA DE SEGUROS</small></div></div></header>
+<main class="doc">
+<h1>Conectar o WhatsApp da corretora</h1>
+<p class="data">Página de uso interno da corretora, para ligar o número de atendimento (WhatsApp Business) à plataforma da Meta.</p>
+<p><button id="conectar" class="botao" style="border:0;cursor:pointer">Conectar WhatsApp</button></p>
+<pre id="saida" style="white-space:pre-wrap;font-size:13px"></pre>
+</main>
+<footer><div class="rodape"><span>Leal Ferreira Corretora de Seguros Ltda · CNPJ 37.572.868/0001-76 · SUSEP 202073575</span><a href="politica-de-privacidade.html">Política de privacidade</a></div></footer>
+<script>
+var saida=document.getElementById('saida');
+function log(t){saida.textContent+=t+'\n';}
+window.RESULTADO={};
+window.fbAsyncInit=function(){FB.init({appId:'1413349170604875',autoLogAppEvents:true,xfbml:true,version:'v25.0'});log('SDK carregado.');};
+window.addEventListener('message',function(e){
+  if(!e.origin||!/facebook\.com$/.test(new URL(e.origin).hostname))return;
+  try{var d=JSON.parse(e.data);
+    if(d.type==='WA_EMBEDDED_SIGNUP'){window.RESULTADO.evento=d;log('Evento do cadastro: '+d.event+(d.data&&d.data.phone_number_id?' (número registrado)':''));}
+  }catch(_){}
+});
+document.getElementById('conectar').onclick=function(){
+  FB.login(function(r){
+    if(r.authResponse&&r.authResponse.code){window.RESULTADO.code=r.authResponse.code;log('Código recebido ('+r.authResponse.code.length+' caracteres). Pode fechar esta janela.');}
+    else{log('Cadastro não concluído: '+JSON.stringify(r));}
+  },{config_id:'2099079260768716',response_type:'code',override_default_response_type:true,
+     extras:{setup:{},featureType:'whatsapp_business_app_onboarding',sessionInfoVersion:'3'}});
+};
+</script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js"></script>
+</body>
+</html>
