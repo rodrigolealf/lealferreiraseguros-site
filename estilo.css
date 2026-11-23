@@ -1,0 +1,30 @@
+:root{--preto:#0b0b0b;--branco:#fff;--cinza:#5f6368;--linha:#e6e6e6;--ouro:#b8963e;--fundo:#fafaf8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--fundo);color:#1d1d1f;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
+a{color:var(--preto)}
+header{background:var(--preto);color:var(--branco);border-bottom:3px solid var(--ouro)}
+.topo{max-width:960px;margin:0 auto;padding:16px;display:flex;align-items:center;gap:14px}
+.topo img{width:56px;height:56px}
+.marca{font-weight:700;letter-spacing:.14em;font-size:18px;line-height:1.2}
+.marca small{display:block;font-weight:500;letter-spacing:.28em;font-size:11px;color:#d9d9d9}
+nav{max-width:960px;margin:0 auto;padding:0 16px 12px;display:flex;flex-wrap:wrap;gap:18px}
+nav a{color:#d9d9d9;text-decoration:none;font-size:14px}
+nav a:hover{color:var(--ouro)}
+main{max-width:960px;margin:0 auto;padding:32px 16px 48px}
+.hero{background:var(--preto);color:var(--branco);border-radius:14px;padding:40px 28px;display:grid;gap:18px}
+.hero h1{margin:0;font-size:30px;line-height:1.25}
+.hero p{margin:0;color:#e2e2e2;max-width:640px}
+.botao{display:inline-block;background:var(--ouro);color:var(--preto);font-weight:700;text-decoration:none;padding:12px 20px;border-radius:999px}
+.grade{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:28px 0}
+.cartao{background:var(--branco);border:1px solid var(--linha);border-radius:12px;padding:20px}
+.cartao h3{margin:0 0 6px;font-size:17px}
+.cartao p{margin:0;color:var(--cinza);font-size:15px}
+h2{font-size:22px;margin:32px 0 10px}
+.doc h1{font-size:28px;margin:0 0 4px}
+.doc .data{color:var(--cinza);margin:0 0 24px}
+.doc h2{font-size:19px;border-left:4px solid var(--ouro);padding-left:10px}
+.doc li{margin:4px 0}
+footer{background:var(--preto);color:#cfcfcf;font-size:14px}
+.rodape{max-width:960px;margin:0 auto;padding:24px 16px;display:grid;gap:6px}
+.rodape a{color:#cfcfcf}
+@media (max-width:600px){.hero h1{font-size:24px}.hero{padding:28px 20px}}
