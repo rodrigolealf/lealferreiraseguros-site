@@ -1,0 +1,12 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<title>Leal Ferreira Corretora de Seguros</title>
+<rect width="512" height="512" fill="#000000"/>
+<g transform="translate(256 256) scale(1.55) translate(-256 -203)" fill="#ffffff">
+<path d="M166 113h181v181h-181z M179 126v155h155v-155z" fill-rule="evenodd"/>
+<rect x="214" y="156" width="18" height="95"/>
+<rect x="214" y="233" width="84" height="18"/>
+<rect x="243" y="156" width="18" height="69"/>
+<rect x="243" y="156" width="56" height="18"/>
+<rect x="243" y="194" width="38" height="17"/>
+</g>
+</svg>
